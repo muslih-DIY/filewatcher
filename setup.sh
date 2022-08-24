@@ -1,4 +1,5 @@
 SOURCE=$(pwd)
+cd setups
 echo '#!/bin/bash
 #Version:
 #Created Date: 24-08-2022
@@ -9,9 +10,10 @@ echo '#!/bin/bash
 
 directory='"$SOURCE"'
 ' > ./watcher
-cat watcherservice >> ./watcher
+cat ./watcherservice >> ./watcher
 chmod +x ./watcher
 cp ./watcher /etc/init.d/watcher
+cd ..
 
 
 

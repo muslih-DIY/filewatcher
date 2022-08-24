@@ -1,13 +1,3 @@
-#!/bin/bash
-#Version:
-#Created Date: 24-08-2022
-#Modified Date:
-#Author: muslih k
-# START #
-
-
-directory=/home/ivrst/BSNL_IVRS_PROJECT/file_watcher
-
 appname=FileWatcher
 execu=$directory/watchman.sh
 pid=$directory/$appname.pid
@@ -26,7 +16,7 @@ case "$1" in
 start)
 
    watchsource=$2
-   process=$directory/$3
+   process=$directory/process/$3
 
    if [[ -d $watchsource ]]; then
       printf "${GR}  watching Directory: $watchsource   ${NC}\n"
